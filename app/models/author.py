@@ -7,6 +7,6 @@ class Author(Base):
     __tablename__ = 'authors'
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(255), nullable=False, index = True, unique = True)
-    biography = Column(Text, nullable=True)
+    bio = Column(Text, nullable=True)
 
     books = relationship('Book', back_populates = 'author')
